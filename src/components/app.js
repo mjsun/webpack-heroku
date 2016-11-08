@@ -7,7 +7,6 @@ export default class App extends React.Component {
     return (
       <div>
           <NavBar />
-          <Link to="/home">Home</Link>
           {this.props.children}
       </div>
     )
