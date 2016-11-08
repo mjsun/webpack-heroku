@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 var ReactQuill = require('react-quill');
-
+import {PageHeader} from 'react-bootstrap';
 
 class QuestionCreate extends Component {
     constructor(props) {
@@ -14,7 +14,9 @@ class QuestionCreate extends Component {
 
     render(){
         return (
-            <div>
+            <div class="container">
+                <PageHeader>Go ahead post a question</PageHeader>
+
                 <ReactQuill
                     theme="snow"
                     value={this.state.text}
