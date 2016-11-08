@@ -1,5 +1,8 @@
 import React, {Component} from 'react'
-import {ListGroup, ListGroupItem} from 'react-bootstrap';
+import {ListGroup, ListGroupItem, Button} from 'react-bootstrap';
+import {Link} from 'react-router';
+import {LinkContainer} from 'react-router-bootstrap';
+
 const QUESTIONLIST = [
     {
         title: 'How are you?',
@@ -97,7 +100,10 @@ class QuestionItem extends Component {
         }
         return (
             <div>
-                item {this.props.params.id} {question.title}
+                <LinkContainer to={{pathname: '/questions/edit/'+ question.id}}>
+                    <Button bsStyle="info">Edit</Button>
+                </LinkContainer>
+                {question.title}
                 <ListGroup>
                     {question.answers.map(function(answer){
                         return <ListGroupItem>

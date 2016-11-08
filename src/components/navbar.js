@@ -12,7 +12,7 @@ class NavBar extends Component {
             <Navbar inverse collapseOnSelect>
                 <Navbar.Header>
                     <Navbar.Brand>
-                        <Link to="/home">QuestionStack</Link>
+                        <Link to="/">QuestionStack</Link>
                     </Navbar.Brand>
                     <Navbar.Toggle />
                 </Navbar.Header>
@@ -23,6 +23,9 @@ class NavBar extends Component {
                         </NavItem>
                         <NavItem eventKey={2} href="#">
                             <Link to="/question/create">Ask</Link>
+                        </NavItem>
+                        <NavItem eventKey={3} href="#">
+                            <Link to="/home">Home</Link>
                         </NavItem>
                     </Nav>
                     <Nav pullRight style={navBarRight}>
